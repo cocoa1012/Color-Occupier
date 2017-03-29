@@ -1,0 +1,36 @@
+.board {
+    display: block;
+    font-weight: normal;
+    color: white;
+    text-align: center;
+    text-transform: uppercase;
+    margin: 0;
+    padding: 20px 0;
+}
+
+.board .role {
+    font-weight: bold;
+    font-size: 120%;
+}
+
+.board .area {
+  font-weight: bold;
+  font-size: 120%;
+  margin: 0 2%;
+}
+
+#red{
+  color: red;
+  margin-right: 3%;
+}
+
+#blue{
+  color: blue;
+  margin-left: 3%;
+}
+
+@media (min-width: 576px) {
+    .board .color-picked {
+        font-size: 200%;
+    }
+}
