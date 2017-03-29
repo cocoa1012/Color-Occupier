@@ -1,5 +1,6 @@
 .field::after {
     content: "";
     display: block;
+    margin-bottom: 10%;
     clear: both;
 }
