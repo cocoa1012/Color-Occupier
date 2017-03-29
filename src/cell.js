@@ -2,10 +2,7 @@ import Component from  './component.js';
 
 import './cell.css';
 
-/*
- * [Event name: params]
- * click: this, color
- */
+
 export default class Cell extends Component {
     static getRootClass() {
         return '.cell';
@@ -13,7 +10,6 @@ export default class Cell extends Component {
 
     constructor(root) {
         super(root);
-        console.log("cell");
         this.color = "N";
         this.id = 0;
         root.addEventListener("click", this.handleCellClick.bind(this));
@@ -22,12 +18,12 @@ export default class Cell extends Component {
 
     reset() {
         this.color = "N";
+        this.root.style.backgroundColor="white";
     }
 
-    handleCellClick(e) {
+    handleCellClick() {
       if (this.color==="N"){
           this.fire('click',this.id);
-          console.log("C");
       }
     }
 

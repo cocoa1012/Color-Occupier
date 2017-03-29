@@ -2,10 +2,6 @@ import Component from './component.js';
 
 import './reset.css';
 
-/*
- * [Event name: params]
- * click: this
- */
 export default class Reset extends Component {
     static getRootClass() {
         return '.reset';
@@ -20,11 +16,7 @@ export default class Reset extends Component {
     }
 
     reset() {
-        this.resetDisplay.textContent = "New Color";
-    }
-
-    showPlayAgain() {
-        this.resetDisplay.textContent = "Play Again";
+        this.resetDisplay.textContent = "New Game";
     }
 
     handleDomClick(e) {

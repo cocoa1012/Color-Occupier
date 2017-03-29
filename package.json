@@ -15,7 +15,7 @@
     "webpack": "^2.3.2"
   },
   "scripts": {
-    "build": "webpack",
+    "build": "webpack -p",
     "watch": "webpack -w",
     "test": "echo \"Error: no test specified\" && exit 1"
   },

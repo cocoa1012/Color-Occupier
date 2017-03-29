@@ -25,7 +25,7 @@ export default class Main extends Component {
         this.board = new Board(root.querySelector('.board'));
         this.turnDisplay = root.querySelector('#turn');
         this.messageDisplay =root.querySelector('#message');
-        this.turnDisplay.textContent = "R";
+        this.turnDisplay.textContent = "RED";
         this.RedDispaly = root.querySelector('#areaR');
         this.BlueDispaly = root.querySelector('#areaB');
 
@@ -39,18 +39,21 @@ export default class Main extends Component {
         this.resetDisplay.style.display = 'block';
         if (BLUE > RED) {
           this.messageDisplay.textContent = "BLUE WIN!!";
+          this.turnDisplay.textContent = "";
         }else if(RED > BLUE){
           this.messageDisplay.textContent = "RED WIN!!";
+          this.turnDisplay.textContent = "";
         }else {
           this.messageDisplay.textContent = "Draw!!";
+          this.turnDisplay.textContent = "";
         }
     }
 
     handleChangeTurn(firer,turn){
       if (turn === "R") {
-        this.turnDisplay.textContent = "R";
+        this.turnDisplay.textContent = "RED";
       }else if (turn === "B") {
-        this.turnDisplay.textContent = "B";
+        this.turnDisplay.textContent = "BLUE";
       }
     }
 
@@ -60,7 +63,12 @@ export default class Main extends Component {
     }
 
     handleRestClick() {
-
+        this.turnDisplay.textContent = "RED";
+        this.messageDisplay.textContent = "Turn : ";
+        this.RedDispaly.textContent = 0;
+        this.BlueDispaly.textContent = 0;
+        this.resetDisplay.style.display = 'none';
+        this.field.reset();
         this.reset.reset();
     }
 }
